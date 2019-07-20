@@ -27,9 +27,9 @@ weeks <- 1:17 # only covers regular season
 
 # fanduel goes back to 2011, draft kings to 2014, yahoo to 2016
 # fd = fanduel, dk = draft kings, yh = yahoo
-fd_urls <- make_urls(base_url, weeks, 2011:2017, 'fd')
-dk_urls <- make_urls(base_url, weeks, 2014:2017, 'dk')
-yh_urls <- make_urls(base_url, weeks, 2016:2017, 'yh')
+fd_urls <- make_urls(base_url, weeks, 2011:2018, 'fd')
+dk_urls <- make_urls(base_url, weeks, 2014:2018, 'dk')
+yh_urls <- make_urls(base_url, weeks, 2016:2018, 'yh')
 
 fanduel_data <- map(fd_urls, ~read_html(.x) %>% get_pts_data())
 draftkings_data <- map(dk_urls, ~read_html(.x) %>% get_pts_data())
