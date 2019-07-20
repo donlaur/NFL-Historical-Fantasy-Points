@@ -37,12 +37,12 @@ yahoo_data <- map(yh_urls, ~read_html(.x) %>% get_pts_data())
 
 fanduel_data %>% 
   bind_rows() %>% 
-  write_csv('processed_data/fanduel_nfl_2011_2017.csv')
+  write_csv('processed_data/fanduel_nfl_2011_2018.csv')
 
 draftkings_data %>% 
   bind_rows() %>% 
-  write_csv('processed_data/draftkings_nfl_2014_2017.csv')
+  write_csv('processed_data/draftkings_nfl_2014_2018.csv')
 
 yahoo_data %>% 
   bind_rows() %>% 
-  write_csv('processed_data/yahoo_nfl_2016_2017.csv')
+  write_csv('processed_data/yahoo_nfl_2016_2018.csv')
